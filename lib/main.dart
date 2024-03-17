@@ -1,3 +1,5 @@
+import 'package:coffee_shop/pages/intro_page.dart';
+import 'package:coffee_shop/pages/menu_page.dart';
 import 'package:flutter/material.dart';
 
 main() {
@@ -9,6 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const IntroPage(),
+      routes: {
+        'intropage': (context) => const IntroPage(),
+        'menupage' : (context) => const MenuPage()
+      },
+    );
   }
 }
